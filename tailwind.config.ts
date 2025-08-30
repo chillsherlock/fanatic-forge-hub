@@ -74,8 +74,8 @@ export default {
 				}
 			},
 			fontFamily: {
-				sans: ['Inter', 'ui-sans-serif', 'system-ui'],
-				display: ['Orbitron', 'ui-sans-serif', 'system-ui'],
+				sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
+				display: ['Rajdhani', 'ui-sans-serif', 'system-ui'],
 				mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular']
 			},
 			backgroundImage: {

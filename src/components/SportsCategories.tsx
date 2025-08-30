@@ -1,38 +1,42 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
+import cricketImage from "@/assets/cricket-category.jpg";
+import footballImage from "@/assets/football-category.jpg";
+import basketballImage from "@/assets/basketball-category.jpg";
+import tennisImage from "@/assets/tennis-category.jpg";
 
 const SportsCategories = () => {
   const categories = [
     {
       id: 1,
       name: "Cricket",
-      description: "International and domestic team jerseys",
-      image: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=600&h=400&fit=crop",
+      description: "Authentic jerseys from IPL, World Cup & county teams",
+      image: cricketImage,
       itemCount: "120+ Items",
       gradient: "from-green-600/20 to-blue-600/20"
     },
     {
       id: 2,
-      name: "Football",
-      description: "Premier League, La Liga, Serie A & more",
-      image: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&h=400&fit=crop",
+      name: "Football", 
+      description: "Premier League, Champions League & international kits",
+      image: footballImage,
       itemCount: "200+ Items",
       gradient: "from-red-600/20 to-blue-600/20"
     },
     {
       id: 3,
       name: "Basketball",
-      description: "NBA, college teams and vintage jerseys",
-      image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600&h=400&fit=crop",
+      description: "NBA legends, current stars & college championship gear",
+      image: basketballImage,
       itemCount: "85+ Items",
       gradient: "from-orange-600/20 to-purple-600/20"
     },
     {
       id: 4,
       name: "Tennis",
-      description: "Grand Slam and tournament apparel",
-      image: "https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?w=600&h=400&fit=crop",
+      description: "Wimbledon whites, Grand Slam collections & pro tour",
+      image: tennisImage,
       itemCount: "60+ Items",
       gradient: "from-yellow-600/20 to-green-600/20"
     }

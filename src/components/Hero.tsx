@@ -24,30 +24,30 @@ const Hero = () => {
             Authentic Sports Merchandise
           </Badge>
           
-          <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 leading-tight">
-            <span className="gradient-text">Sports Hub</span>
+          <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 leading-tight tracking-wide">
+            <span className="gradient-text">SPORTS HUB</span>
             <br />
-            <span className="text-foreground">Premium Jerseys</span>
+            <span className="text-foreground font-sans font-light">Where Legends Live</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Discover authentic jerseys and exclusive memorabilia from cricket, football, basketball, and tennis. 
-            Bring yourself closer to the game.
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed font-light">
+            Experience the thrill of authentic sports merchandise. From championship jerseys to legendary memorabilia, 
+            we bring the stadium atmosphere right to your wardrobe.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               size="lg" 
-              className="bg-gradient-primary border-0 hover:shadow-premium px-8 py-6 text-lg font-semibold"
+              className="bg-gradient-primary border-0 hover:shadow-premium px-8 py-6 text-lg font-semibold font-display tracking-wide"
             >
-              Shop Collection
+              EXPLORE COLLECTION
             </Button>
             <Button 
               variant="outline" 
               size="lg" 
-              className="border-sports-blue/30 text-sports-blue hover:bg-sports-blue hover:text-sports-black px-8 py-6 text-lg font-semibold"
+              className="border-sports-blue/30 text-sports-blue hover:bg-sports-blue hover:text-sports-black px-8 py-6 text-lg font-semibold font-display tracking-wide"
             >
-              Custom Jerseys
+              CUSTOM JERSEYS
             </Button>
           </div>
           
