@@ -2,41 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Sports Hub Design System - Premium Dark Theme with Blue Accents */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
+    /* Dark theme primary colors */
+    --background: 220 20% 6%;
+    --foreground: 210 40% 98%;
+    
+    /* Card and surface colors */
+    --card: 220 20% 8%;
+    --card-foreground: 210 40% 98%;
+    
+    --popover: 220 20% 8%;
+    --popover-foreground: 210 40% 98%;
+    
+    /* Primary brand colors - Electric Blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 220 20% 6%;
+    
+    /* Secondary colors - Darker surfaces */
+    --secondary: 220 20% 12%;
+    --secondary-foreground: 210 40% 98%;
+    
+    /* Muted colors for subtle text */
+    --muted: 220 20% 12%;
+    --muted-foreground: 217 10% 64%;
+    
+    /* Accent colors - Lighter blue */
+    --accent: 217 91% 60%;
+    --accent-foreground: 220 20% 6%;
+    
+    /* Status colors */
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    
+    /* Borders and inputs */
+    --border: 220 20% 16%;
+    --input: 220 20% 16%;
+    --ring: 217 91% 60%;
+    
+    --radius: 0.75rem;
+    
+    /* Sports Hub specific design tokens */
+    --sports-blue: 217 91% 60%;
+    --sports-blue-light: 217 91% 70%;
+    --sports-blue-dark: 217 91% 40%;
+    --sports-black: 220 20% 6%;
+    --sports-gray: 220 20% 12%;
+    --sports-gray-light: 220 20% 16%;
+    --sports-text-muted: 217 10% 64%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--sports-blue)), hsl(var(--sports-blue-dark)));
+    --gradient-hero: linear-gradient(180deg, hsl(var(--sports-black)) 0%, hsl(var(--sports-gray)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--sports-gray)) 100%);
+    
+    /* Shadows */
+    --shadow-premium: 0 10px 40px -10px hsl(var(--sports-blue) / 0.3);
+    --shadow-glow: 0 0 30px hsl(var(--sports-blue) / 0.2);
+    --shadow-card: 0 4px 20px hsl(220 20% 4% / 0.5);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -94,6 +123,7 @@ All colors MUST be HSL.
   }
 }
 
+/* Custom Sports Hub Styles */
 @layer base {
   * {
     @apply border-border;
@@ -101,5 +131,72 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+  
+  /* Jersey texture background */
+  .jersey-texture {
+    background-image: 
+      radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+  
+  /* Glass morphism effect */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Glowing hover effect */
+  .glow-hover {
+    transition: var(--transition-smooth);
+  }
+  
+  .glow-hover:hover {
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
+  }
+  
+  /* Premium gradient text */
+  .gradient-text {
+    background: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Smooth animations */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--sports-black));
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--sports-blue));
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--sports-blue-light));
   }
 }
